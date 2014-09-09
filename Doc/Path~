@@ -1,0 +1,47 @@
+Prelimilary Understanding
+	1.different and popular types of database
+	2.commonly used terms and concepts
+	3.review the principles in database management course 
+	4.review how to deal with some common thorny problems in dbms project
+
+
+
+1.Import the xml file into database by self parsing is not hard. But is there any interface which can tranform the xml to a popular format.
+2.More details about the requirment and performance parameter are needed. Because there are some distinct options can be set to configure the database which could lead different database performance.
+
+
+
+1.	Document - MongoDB
+	Key-Value, simplest efficient
+	Wide-Column	
+
+
+structured and unstructured data
+Distributed Computing:horizontal scale and vertical scale
+How is the Key-Value DB used
+
+
+
+SQL vs NoSQL
+	unstructured data
+	scalibility horizontal scaling
+	what about the speed? it depends
+	what about the light weighted 
+	what about limited hardware resource?
+		depends on different type of NoSQL db type
+	A report benchmark says that given a simple but large dataset, mysql performs much better the mongodb in search time
+
+
+What's the key features to choose a DB.
+	schemaless or schema?
+	scaling in size
+	resources needed
+	performance
+
+
+How to compare the performance between DBs?
+	If I use the actual XML data, then the performance greatly depends on data model you choose or other options 
+	If don't use the actual XML data, how to represent the characters of actual data 
+	How to mimic the limited hardware resources
+
+

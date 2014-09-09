@@ -1,0 +1,15 @@
+MongoDB is a document oriented database as well as a NoSQL database. There is no pre-defined scheme needed. You can insert any kind of document(record) when you want and query on each field of the document.
+C++ driver is easily used with convinient api.
+Using mongo shell can control the database directly. And see the stats of each database and collection.
+
+Two options, one is power of 2 sized allocation and another is exact fit allocation which decide the padding size and the exteet idle size and which will affect the dataSize, storageSize and fileSize as well as the update performance.
+
+MongoDB use the lazy write strategy and use Journal to guarentee the reliability of database related to ACID criterion.
+
+MongoDB use the reader-writer lock to deal with the concurrent access and sometimes yield can happen.
+
+MongoDB doesn't support manually tuning the memory used. It automaticly use as much memory as it needs and fit for the available idle memory.
+
+Inserted 1000000 documents. The file size is roughly 200mb and the storage used is about 400mb.
+
+Because of duplication, search query on 'year' field is 0.001 second. Search query on 'title' is about 0.0002 second.

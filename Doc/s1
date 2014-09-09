@@ -1,0 +1,68 @@
+Prelimilary Understanding
+	1.different and popular types of database
+	2.commonly used terms and concepts
+	3.review the principles in database management course 
+	4.review how to deal with some common thorny problems in dbms project
+
+
+
+1.Import the xml file into database by self parsing is not hard. But is there any interface which can tranform the xml to a popular format.
+2.More details about the requirment and performance parameter are needed. Because there are some distinct options can be set to configure the database which could lead different database performance.
+
+
+
+1.	Document - MongoDB
+	Key-Value, simplest efficient
+	Wide-Column	
+
+
+structured and unstructured data
+Distributed Computing:horizontal scale and vertical scale
+How is the Key-Value DB used
+
+
+
+SQL vs NoSQL
+	unstructured data
+	scalibility horizontal scaling
+	what about the speed? it depends
+	what about the light weighted 
+	what about limited hardware resource?
+		depends on different type of NoSQL db type
+	A report benchmark says that given a simple but large dataset, mysql performs much better the mongodb in search time
+
+
+What's the key features to choose a DB.
+	schemaless or schema?
+	scaling in size
+	resources needed
+	performance
+
+
+How to compare the performance between DBs?
+	If I use the actual XML data, then the performance greatly depends on data model you choose or other options 
+	If don't use the actual XML data, how to represent the characters of actual data 
+	How to mimic the limited hardware resources
+
+
+
+
+
+
+Hi Gurmukh,
+
+So far I have a preliminary knowledge about the database. And here are some questions regarding to my task.
+
+    Comparing SQL and NoSQL, the advantages of NoSQL are unstructured data and horizontal scaling.
+        Unstructured data is very powerful facing the big data  like social networks whose data are really schemaless. In our scenario, it could be much easier to build up the DB if we use NoSQL like MongoDB because we don't need to define the table. However some test results show that MySQL is 20x faster then MongoDB if the given data are normal structured ones. ( There are also some other test results show that MongoDB is much faster then MySQL. It is kind of weird. )
+        Horizontal scaling could be useless in our scenario as far as I know because there is only one server machine.
+        So why do we want to choose a NoSQL DB?
+    Considering the query performance of different DB. I didn't find out a general conclusion about which one is better. The answer always says that it depends. So if we want to test our data on different DBs, how can I do that? I mean if we use the actual data like XML file you send me, the performance result could heavily depend on the which options like data model do I choose. So the task might be harder. But if we don't use the actual data, the test result may have no significance.
+
+So may I discuss this with you and is there some time tomorrow available for you?
+By the way, although I don't know if NoSQL DBs fits for our application, some ideas behind it like document stores and wide column stores are really cool and amazing :)
+
+Best
+Jiacheng
+
+
