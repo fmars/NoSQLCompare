@@ -13,3 +13,6 @@ When tried to build up the testcase containing movie and actor which is a many t
 However I found that no graph database support C++ driver. They almost support java and use a REST interface to control the server. It might because graph database mainly is used for web application where C++ is kind of useless.
 
 On the other hand proboblely because it is quiet a new idea and technoly, the website and document are not as goog as a well developed one like mongodb.
+
+
+The puzzel is why such Graph dbs don't support a direct control method instead of using RESTful interface?
