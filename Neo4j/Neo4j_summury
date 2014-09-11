@@ -1,0 +1,15 @@
+Neo4j is one of the most popular Graph database.
+
+{Graph database is a database that uses graph structures with nodes, edges and properties to represent and store data. At first it seems like need predefine schema. However after some prelimilary study, I found it is really cool and amazing. The data model of this is exactly the same with how you treat the world in your mind especially the relationships.}
+
+In Neo4j it support a new query language called Cypher and support using java jersey to connect with database server by RESTful interface.
+
+When tried to build up the testcase containing movie and actor which is a many to many relation, I begun to find out how amazing Neo4j was. {
+	In a Relational database, a movie table, actor table and anothat table which to store the relation are needed.
+	In Document oriented database the data model how to store the relation is also needed consideration, for example add a array of movie id to each actor document. Say some actor document has five movie id. Then if we want to find out all the movie names in which performed by this actor. We first needs to search this actor's document. Then according to movie id to find out the name and do this procedure five times.
+	However, if we use the graph database, the data model is really straightforward. We don't need to think out it deliberated. Because we can just store the unity as it is without considering the relation. Then we just build up the relation as it is. And query is executed as graph traversal and said with a high performance.
+}
+
+However I found that no graph database support C++ driver. They almost support java and use a REST interface to control the server. It might because graph database mainly is used for web application where C++ is kind of useless.
+
+On the other hand proboblely because it is quiet a new idea and technoly, the website and document are not as goog as a well developed one like mongodb.
