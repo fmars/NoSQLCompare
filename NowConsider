@@ -1,0 +1,10 @@
+Document Oriented 
+	rethinkDB
+
+Key-value
+	Redis
+	foundationDB
+	berkeleyDB
+
+wide column 
+	Hpyertable

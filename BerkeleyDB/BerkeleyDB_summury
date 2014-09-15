@@ -1,0 +1,8 @@
+It's a key-value pair type of NoSQL database. However the problem is I still don't understand what is the advantage or usage of this kind of database either compared with SQL or document oriented database.
+
+BerkeleyDB is implemented by C++ and support C++ driver. Althougt not as good easy to use as MongoDB especially in terms of the shell control, it has well written documentation.
+
+What I did is implementing a simple test which insert one million records into the database without duplication in key. 
+The raw data is about 200MB and the database is 310MB.
+A equal query runs in 0.1 milisecond.
+The size of memory use and the size of single daba file can be configured.
