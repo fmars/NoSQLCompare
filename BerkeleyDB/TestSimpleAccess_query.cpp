@@ -59,33 +59,7 @@ int main(int argc, char *argv[])
 	cerr << "Db Exception: " << dbe.what();
 	}
 
+	while(1);
 
-/*
-		int ret;
-
-		if ((ret = db->get(NULL, goodkeydbt, resultdbt, 0)) != 0) {
-			cout << "get: " << DbEnv::strerror(ret) << "\n";
-		}
-		else {
-			char *result = (char *)resultdbt->get_data();
-			cout << "got data: " << result << "\n";
-		}
-
-		if ((ret = db->get(NULL, badkeydbt, resultdbt, 0)) != 0) {
-			// We expect this...
-			cout << "get using bad key: "
-			     << DbEnv::strerror(ret) << "\n";
-		}
-		else {
-			char *result = (char *)resultdbt->get_data();
-			cout << "*** got data using bad key!!: "
-			     << result << "\n";
-		}
-		cout << "finished test\n";
-	}
-	catch (DbException &dbe) {
-		cerr << "Db Exception: " << dbe.what();
-	}
-	*/
 	return 0;
 }

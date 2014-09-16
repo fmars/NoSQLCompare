@@ -5,4 +5,5 @@ BerkeleyDB is implemented by C++ and support C++ driver. Althougt not as good ea
 What I did is implementing a simple test which insert one million records into the database without duplication in key. 
 The raw data is about 200MB and the database is 310MB.
 A equal query runs in 0.1 milisecond.
-The size of memory use and the size of single daba file can be configured.
+
+The size of memory use and the size of single daba file can be configured. Without specify the memory use of equal query is about 20M
