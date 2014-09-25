@@ -26,3 +26,12 @@ Next. Analysis the data and required operations.
 Next. Design the database data model especially about how to store and query one-to-many relationship.
 Next. Code and test.
 
+
+//Sept.24th
+Find it hard to maintain one-to-many relationship by Hypertable because of the column value search limitation and doesn't support RegEx.
+Thus the solution may only be that use multiple version of the cell or use multiple table.
+
+When Ruchi said that try to use mongodb and find if there is any solution, I really didn't want to move to MongoDB because I just started with HyperTable. And in my mind that MongoDB doesn't support that feature either.
+
+However the really embarrassing thing is that, when I tried to see MongoDB, both of these two features are supported.
+MongoDB supports embedded structure search and RegEx search.

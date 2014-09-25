@@ -1,0 +1,53 @@
+Database insertion with 1000000 records
+
+use power of 2 size allocation
+
+> db.stats(1024*1024)
+{
+	"db" : "fmars",
+	"collections" : 3,
+	"objects" : 1000004,
+	"avgObjSize" : 344.9107483570066,
+	"dataSize" : 328,
+	"storageSize" : 439,
+	"numExtents" : 17,
+	"indexes" : 1,
+	"indexSize" : 30,
+	"fileSize" : 960,
+	"nsSizeMB" : 16,
+	"dataFileVersion" : {
+		"major" : 4,
+		"minor" : 5
+	},
+	"extentFreeList" : {
+		"num" : 0,
+		"totalSize" : 0
+	},
+	"ok" : 1
+}
+
+use exact fit allocation
+}
+	"db" : "fmars",
+	"collections" : 3,
+	"objects" : 1000004,
+	"avgObjSize" : 238.1201035195859,
+	"dataSize" : 227,
+	"storageSize" : 320,
+	"numExtents" : 16,
+	"indexes" : 1,
+	"indexSize" : 27,
+	"fileSize" : 448,
+	"nsSizeMB" : 16,
+	"dataFileVersion" : {
+		"major" : 4,
+		"minor" : 5
+	},
+	"extentFreeList" : {
+		"num" : 0,
+		"totalSize" : 0
+	},
+	"ok" : 1
+}
+
+
