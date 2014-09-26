@@ -1,0 +1,4 @@
+BerkeleyDB is a Key-Value Stored NoSQL database.
+The key is a string and the value is a sequence of data. No meanning, no semantic and no structure. Just like a bunch of raw data given by start address and the size.
+So far as I know, this is that BerkelyDB looks like which does support less for programming.
+The advantage of such simple a feature cuold be really easy to scale up. This is the key idea behind it I think.

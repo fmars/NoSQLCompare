@@ -14,7 +14,24 @@
 
 using namespace std;
 using namespace mongo;
-
+vector<string> parseCast(string &value){
+	value+=",";
+	vector<string>res;
+	string tmp;
+	int p=0;
+	for(int i=0;i<value.size();i++){
+		if(value[i]==','){
+			tmp=value.substr(p,i-p);
+			while(tmp.size()>0 && tmp[0]==' ')
+				tmp=tmp.substr(1,tmp.size()-1);
+			while(tmp.size()>0 && tmp[tmp.size()-1]==' ')
+				tmp=tmp.substr(0,tmp.size()-1);
+			p=i+1;
+			res.push_back(tmp);
+		}
+	}
+	return res;
+}
 vector<string> get_test_source(string field){
 	vector<string>res;
 	ifstream file("parsedData");
@@ -104,7 +121,30 @@ void query_test_title(mongo::DBClientConnection &conn, const string &fu_name){
 	cout<<"Each Query Time= "<<((float)t2-(float)t1)/CLOCKS_PER_SEC/titles.size()<<endl;
 	cout<<"END to test on title\n";
 }
-
+void query_test_cast(mongo::DBClientConnection &conn, const string &fu_name){
+	cout<<"BEGIN to test on cast\n";
+	vector<string>cast_lines=get_test_source("cast");
+	vector<string>casts;
+	for(int i=0;i<cast_lines.size();i++){
+		vector<string>tmp=parseCast(cast_lines[i]);
+		casts.insert(casts.begin(),tmp.begin(),tmp.end());
+	}
+	clock_t t1,t2;
+	t1=clock();
+	int count=0;
+	for(int i=0;i<casts.size();i++){
+		cout<<i<<"/"<<casts.size()<<endl;
+		int c=query_record_regex(conn,fu_name,"cast",casts[i]);
+		cout<<casts[i]<<":"<<c<<endl;
+		count+=c;
+	}
+	t2=clock();
+	cout<<"Total Query Item: "<<casts.size()<<endl;
+	cout<<"Total Result Ttem:"<<count<<endl;
+	cout<<"Total Query Time="<<((float)t2-(float)t1)/CLOCKS_PER_SEC<<endl;
+	cout<<"Each Query Time= "<<((float)t2-(float)t1)/CLOCKS_PER_SEC/casts.size()<<endl;
+	cout<<"END to test on cast\n";
+}
 void query_test_genre(mongo::DBClientConnection &conn, const string &fu_name){
 	cout<<"BEGIN to test on genre\n";
 	vector<string>genres;
@@ -164,7 +204,7 @@ int main( int argc, const char **argv ) {
 
 	query_test_title(conn,fu_name);
 	query_test_genre(conn,fu_name);
-
+	query_test_cast(conn,fu_name);
 
     return EXIT_SUCCESS;
 }

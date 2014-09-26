@@ -35,3 +35,6 @@ When Ruchi said that try to use mongodb and find if there is any solution, I rea
 
 However the really embarrassing thing is that, when I tried to see MongoDB, both of these two features are supported.
 MongoDB supports embedded structure search and RegEx search.
+
+//Sept.26th
+All the test results are recorded in the NoSQLreport.docx

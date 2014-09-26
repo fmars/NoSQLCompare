@@ -1,0 +1,5 @@
+As a Key-Value Store Database, it is the most popular and best used one.
+
+The most two reasons make it stand out are data types and in memory store.
+First as a Key-Value store Redis doesn't like BerkeleyDB that just supports very simple value data structure. Instead Redis support a full fashion of complex data structures like string, hash, list and set. And each complex structure can contain another for example the element of a list can be another list. This feature gives a lot convinience for programmer.
+Second Redis is a in memory database which means it will store some data in the memory that supports really fast query operation. But not like Memcache, on the one hand Redis is a in memory database, on the other hand Redis also supports the In-Disk persistency which means although data is stored in memory, the memory data will flush to disk every period which can be setted. If you set a short time then Redis will frequently write the in memory data to disk.
